@@ -1,0 +1,225 @@
+.bonus-auth-banner {
+  background: var(--color-bg-section);
+  border-bottom: 1px solid var(--color-border);
+  padding: 24px 0;
+}
+
+.bonus-auth-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bonus-auth-icon {
+  flex-shrink: 0;
+}
+
+.bonus-auth-text {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.bonus-auth-text h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.bonus-auth-text p {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+}
+
+.bonus-auth-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bonus-auth-actions .btn {
+  white-space: nowrap;
+}
+
+.bonus-welcome-banner {
+  background: var(--color-primary);
+  padding: 20px 0;
+}
+
+.bonus-welcome-banner h3 {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.bonus-welcome-banner p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+.bonus-welcome-banner strong {
+  color: var(--color-accent-light);
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.how-card {
+  text-align: center;
+  padding: 28px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-section);
+}
+
+.how-step {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.how-card h3 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.how-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.level-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid;
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.level-icon {
+  display: flex;
+}
+
+.level-name {
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+}
+
+.level-range {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-section);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid var(--color-border);
+}
+
+.level-discount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+}
+
+.level-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.level-perks li {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  display: flex;
+  gap: 8px;
+}
+
+.level-perk-check {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+
+.faq-item h4 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .how-grid,
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bonus-auth-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .bonus-auth-actions {
+    width: 100%;
+  }
+
+  .bonus-auth-actions .btn {
+    flex: 1 1 140px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-grid,
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+}

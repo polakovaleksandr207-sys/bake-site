@@ -1,0 +1,190 @@
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.contacts-main {
+  margin-bottom: 40px;
+}
+
+.contacts-main h2,
+.contacts-form-wrapper h2 {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-detail:first-of-type {
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-detail strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+}
+
+.contact-detail span,
+.contact-detail a {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.contact-detail a {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.contact-detail a:hover {
+  color: var(--color-primary-dark);
+}
+
+.departments h3 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.dept-card {
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dept-card strong {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.dept-card a {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.dept-card a:hover {
+  color: var(--color-primary-dark);
+}
+
+.dept-card span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.form-lead {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group-checkbox {
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.checkbox-label input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-label span {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.contact-submit {
+  width: 100%;
+  text-align: center;
+}
+
+.form-success {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.form-success-icon {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.form-success h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .departments-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

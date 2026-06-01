@@ -1,0 +1,152 @@
+.bakeries-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bakery-card {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.bakery-card:nth-child(even) {
+  direction: rtl;
+}
+
+.bakery-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.bakery-card-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bakery-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bakery-card-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.bakery-card-body {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bakery-card-name {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}
+
+.bakery-card-desc {
+  font-size: 0.93rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.bakery-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.bakery-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.bakery-info-row a {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.bakery-info-row a:hover {
+  color: var(--color-primary-dark);
+}
+
+.bakery-info-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bakeries-note-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bakeries-note-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bakeries-note-inner h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.bakeries-note-inner p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.bakeries-note-inner a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .bakery-card {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .bakery-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .bakery-card-image {
+    height: 220px;
+  }
+
+  .bakery-card-body {
+    padding: 24px;
+  }
+}

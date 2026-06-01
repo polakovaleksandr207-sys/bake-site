@@ -1,0 +1,138 @@
+.footer {
+  background: var(--color-bg-dark);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  padding: 56px 24px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.footer-logo span:first-child {
+  font-size: 1.5rem;
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-wheat);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-nav h4,
+.footer-contacts h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-wheat);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transition);
+}
+
+.footer-nav a:hover {
+  color: var(--color-wheat);
+}
+
+.footer-dept {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.footer-dept-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-dept a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color var(--transition);
+}
+
+.footer-dept a:hover {
+  color: var(--color-wheat);
+}
+
+.footer-address {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-address p,
+.footer-address a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color var(--transition);
+}
+
+.footer-address a:hover {
+  color: var(--color-wheat);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 16px;
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+}
